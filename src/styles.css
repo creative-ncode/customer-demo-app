@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.sidebar .nav-dropdown-items .nav-item .nav-link {
+  padding-left: 25px;
+  color: #bdc5ce;
+}
+
+.sidebar .nav-dropdown-items .nav-item .nav-dropdown-items .nav-item .nav-link {
+  padding-left: 40px;
+  color: #707478;
+}
+
+.icon-plus {
+  text-decoration: underline;
+}
+.card-body {
+  table {
+    margin-top: 1rem;
+  }
+}
+.text-danger {
+  width: 100%;
+}
+
+.nav.nav-tabs {
+  background-color: #9e9e9e33;
+}
+
+.tabmenu {
+  padding: 10px 15px;
+  color: #000000;
+  display: inline-block;
+  cursor: pointer;
+}
+.nav-tabs-custom > .nav-tabs > li.active > a {
+  border-top: 0;
+  border-bottom: 2px solid #09a370;
+}
+.panel-body {
+  padding: 15px;
+}
+.profile-view-dis {
+  color: #89817e;
+}
+.nav-tabs-custom .nav-tabs .li {
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  margin-right: 5px;
+ 
+}
+
+

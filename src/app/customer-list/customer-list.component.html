@@ -1,0 +1,24 @@
+
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+        <tr>
+        	<th>Id</th>
+          <th>Name</th>
+          <th>Company Name</th>
+          <th>Email</th>
+          <th>Work Phone</th>
+        </tr>
+    </thead>
+    <tbody>	
+      <tr *ngFor="let data of customers; let i=index;" routerLink="/customer-detail/{{data.id}}"  >
+     	<td>{{data.id}}</td>
+        <td>{{ data.name }}</td>
+        <td>{{ data.company_name }}</td>
+        <td>{{ data.email}}</td>
+        <td>{{ data.work_phone }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+

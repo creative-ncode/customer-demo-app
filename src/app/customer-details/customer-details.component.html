@@ -1,0 +1,75 @@
+
+<div>
+	<button type="button" class="close" aria-label="Close" (click)="close()">
+  <span aria-hidden="true" >×</span>
+</button>
+</div>
+<div class="nav-tabs-custom" style=" padding-top: 40px;">
+  <ul class="nav nav-tabs">
+              <li [ngClass]="activeTab == 1 ? 'active' : ''">
+                <a (click)="switchTab(1)" class="tabmenu">Overview</a>
+              </li>
+
+              <li [ngClass]="activeTab == 2 ? 'active' : ''">
+                <a (click)="switchTab(2)" class="tabmenu" 
+                  >Sales</a
+                >
+              </li>
+             
+            </ul>
+            
+            <div class="tab-content">
+ 			<div class="tab-pane" [ngClass]="activeTab == 1 ? 'active' : ''">
+                <div class="panel-body profile-view-dis">
+                  <div class="row" *ngFor="let data of customers; let i=index;" style="margin-left: 600px; " >
+                  	<div *ngIf="CustomerId == data.id">
+                  		<div class="profile-view-tab"
+                      style="width: 100%; margin-bottom: 10px;
+                      padding: 0 15px;">
+                      <p style="margin: 0 0 10px;">
+                        <span class="title" style="font-weight: bold;">Id</span>:{{ data.id}}
+                      </p>
+                    </div>
+                    <div class="profile-view-tab" style="width: 100%;">
+                      <p >
+                        <span class="title" style="font-weight: bold;" >Name</span>:{{ data.name}}
+                      </p>
+                    </div>
+                    <div class="profile-view-tab" style="width: 100%;">
+                      <p>
+                        <span class="title" style="font-weight: bold;">Company Name</span>:{{ data.company_name}}
+                      </p>
+                    </div>
+
+                   <div class="profile-view-tab" style="width: 100%;">
+                      <p>
+                        <span class="title" style="font-weight: bold;">Email</span>:{{ data.email}}
+                      </p>
+                    </div>
+                   <div class="profile-view-tab" style="width: 100%;">
+                      <p>
+                        <span class="title" style="font-weight: bold;">Work Phone</span>:{{ data.work_phone}}
+                      </p>
+                    </div>
+                   
+                </div>
+            </div>
+            </div>           
+		</div> 
+            <div class="tab-pane" [ngClass]="activeTab == 2 ? 'active' : ''">
+                <div class="panel-body profile-view-dis">
+                  <div class="card" >
+					  <div class="card-body"  *ngFor="let data of customers; let i=index;">
+					   
+					   <div class="Info" *ngIf="CustomerId == data.id" >
+					   	<p style="margin: 0 0 10px;">
+                           {{ data.sales_info}}
+                      </p>
+					   </div>
+					   
+					  </div>
+				</div>
+              </div>
+           </div>
+
+</div>
