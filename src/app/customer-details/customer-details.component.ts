@@ -44,17 +44,33 @@ customers:any [] = [
   ];
    activeTab = 1;
   CustomerId:any;	
+  Filtervalue:any[];
+  customerInfo:any;
+
   constructor( private route: ActivatedRoute,private router: Router,) { }
 
   ngOnInit(): void {
 
 this.route.params.subscribe(params => {
     this.CustomerId = params.id;
-    console.log(this.CustomerId);
-
+ 
   });
+
+  this.Filtervalue = this.customers.filter((customer)=>{
+          return this.CustomerId==customer.id;
+  })
+
+  if(this.Filtervalue.length > 0) {
+    this.customerInfo = this.Filtervalue[0]
+  }
+
 	
   }
+
+
+
+
+
 
   close(){
    this.router.navigate(["/customer-list"]);

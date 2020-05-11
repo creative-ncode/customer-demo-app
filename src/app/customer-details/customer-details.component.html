@@ -21,34 +21,34 @@
             <div class="tab-content">
  			<div class="tab-pane" [ngClass]="activeTab == 1 ? 'active' : ''">
                 <div class="panel-body profile-view-dis">
-                  <div class="row" *ngFor="let data of customers; let i=index;" style="margin-left: 600px; " >
-                  	<div *ngIf="CustomerId == data.id">
+                  <div class="row"  style="margin-left: 600px; " >
+                  	<div>
                   		<div class="profile-view-tab"
                       style="width: 100%; margin-bottom: 10px;
                       padding: 0 15px;">
                       <p style="margin: 0 0 10px;">
-                        <span class="title" style="font-weight: bold;">Id</span>:{{ data.id}}
+                        <span class="title" style="font-weight: bold;">Id</span>:{{ customerInfo.id}}
                       </p>
                     </div>
                     <div class="profile-view-tab" style="width: 100%;">
                       <p >
-                        <span class="title" style="font-weight: bold;" >Name</span>:{{ data.name}}
+                        <span class="title" style="font-weight: bold;" >Name</span>:{{ customerInfo.name}}
                       </p>
                     </div>
                     <div class="profile-view-tab" style="width: 100%;">
                       <p>
-                        <span class="title" style="font-weight: bold;">Company Name</span>:{{ data.company_name}}
+                        <span class="title" style="font-weight: bold;">Company Name</span>:{{ customerInfo.company_name}}
                       </p>
                     </div>
 
                    <div class="profile-view-tab" style="width: 100%;">
                       <p>
-                        <span class="title" style="font-weight: bold;">Email</span>:{{ data.email}}
+                        <span class="title" style="font-weight: bold;">Email</span>:{{ customerInfo.email}}
                       </p>
                     </div>
                    <div class="profile-view-tab" style="width: 100%;">
                       <p>
-                        <span class="title" style="font-weight: bold;">Work Phone</span>:{{ data.work_phone}}
+                        <span class="title" style="font-weight: bold;">Work Phone</span>:{{ customerInfo.work_phone}}
                       </p>
                     </div>
                    
@@ -59,12 +59,11 @@
             <div class="tab-pane" [ngClass]="activeTab == 2 ? 'active' : ''">
                 <div class="panel-body profile-view-dis">
                   <div class="card" >
-					  <div class="card-body"  *ngFor="let data of customers; let i=index;">
-					   
-					   <div class="Info" *ngIf="CustomerId == data.id" >
+					  <div class="card-body">
+					   <div class="Info">
 					   	<p style="margin: 0 0 10px;">
-                           {{ data.sales_info}}
-                      </p>
+              {{ customerInfo.sales_info}}
+              </p>
 					   </div>
 					   
 					  </div>
